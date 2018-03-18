@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication1.FXMLDocumentController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="205.0" layoutY="36.0" prefHeight="63.0" prefWidth="191.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="76.0" text="Input:">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="input" onKeyReleased="#whenValueFilled" prefHeight="32.0" prefWidth="98.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER_LEFT" layoutX="63.0" layoutY="99.0" prefHeight="156.0" prefWidth="161.0">
+               <children>
+                  <Label text="Input Scale">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="fromC" mnemonicParsing="false" selected="true" text="Celsius">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="from" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="fromF" mnemonicParsing="false" text="Fahrenheit" toggleGroup="$from">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="fromK" mnemonicParsing="false" text="Kelvin" toggleGroup="$from">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <Blend />
+               </effect>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" layoutX="396.0" layoutY="99.0" prefHeight="156.0" prefWidth="161.0">
+               <children>
+                  <Label text="Output Scale">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="toC" mnemonicParsing="false" text="Celsius">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="to" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="toF" mnemonicParsing="false" selected="true" text="Fahrenheit" toggleGroup="$to">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="toK" mnemonicParsing="false" text="Kelvin" toggleGroup="$to">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <Blend />
+               </effect>
+            </VBox>
+            <HBox layoutX="205.0" layoutY="278.0" prefHeight="63.0" prefWidth="191.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="76.0" text="Output:">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="output" editable="false" prefHeight="32.0" prefWidth="98.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+   </center>
+</BorderPane>
